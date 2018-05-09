@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>title</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <canvas></canvas>
+  <div class="rotable txt-wrapper">
+    <div class="slidable txt-wrapper">
+        <div class="txt" style="text-align: center">
+          <p style = "padding: 0">Episode VIII</p>
+          <p>THE LAST JEDI</p>
+        </div>
+        <div class="txt">
+          <p>The FIRST ORDER reigns.</p>
+              Having decimated the peaceful Republic, Supreme Leader Snoke now deploys the merciless legions to seize military control of the galaxy.</p>
+          <p>Only General Leia Organa's band of RESISTANCE fighters stand against the rising tyranny, certain that Jedi Master Luke Skywalker will return and restore a spark of hope to the fight.</p>
+          <p>
+              But the Resistance has been exposed. As the First Order speeds toward the rebel base, the brave heroes mount adesperate escape....
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <script>
+  let canvas = document.querySelector("canvas")
+  let ctx = canvas.getContext("2d")
+
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+
+  let numPoints = 300;
+
+  for(let i = 0; i < numPoints; i++){
+    let x = Math.random() * canvas.width
+    let y = Math.random() * canvas.height
+
+    ctx.strokeStyle = '#fff'
+    ctx.rect(x, y, 0.2, 0.2)
+
+    ctx.stroke()
+  }
+
+  </script>
+</body>
+
+</html>

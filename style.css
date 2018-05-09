@@ -1,0 +1,66 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+canvas{
+  z-index: -1;
+  position: absolute;
+}
+
+.txt-wrapper{
+  color: rgb(252, 227, 37);
+  width: 100%;
+  display: block;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.rotable {
+  transform-origin: center;
+  animation: rot .1s linear 0s both;
+}
+
+.slidable{
+  animation: slide 70s linear infinite 0s both;
+}
+
+p{
+  margin: 1em 0;
+}
+
+.txt{
+  color: rgb(252, 227, 37);
+  margin: 0 auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-justify: distribute;
+  font-size: 1.6em;
+  width: 100%;
+  max-width: 80vh;
+}
+
+@keyframes slide {
+  from {
+    /* transform: perspective(100px) rotateX(-30deg); */
+    transform: translateY(550px);
+  }
+  to {
+    /* transform: perspective(100px) rotateX(-30deg); */
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes rot{
+  0%{
+    transform: perspective(100px) rotateX(7deg);
+  }
+  100%{
+    transform: perspective(100px) rotateX(7deg);
+  }
+}
